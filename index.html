@@ -13,11 +13,6 @@
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
-  }
-  .dark-mode body {
-    background-color: #333;
-    color: #fff;
   }
 </style>
 </head>
@@ -36,7 +31,6 @@
           <a class="dropdown-item" href="#">Kayflck!</a>
         </div>
       </div>
-      <button id="toggleMode" class="btn btn-secondary btn-block mt-3">Toggle Dark Mode</button> <!-- Button to toggle dark mode -->
     </div>
   </div>
 </div>
@@ -47,13 +41,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-  // Function to toggle dark mode
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+  // Check if the website is being accessed from a mobile device
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
   }
 
-  // Event listener for dark mode toggle button
-  document.getElementById('toggleMode').addEventListener('click', toggleDarkMode);
+  // Redirect to a page with a message if accessed from a mobile device
+  if (isMobileDevice()) {
+    window.location.href = "mobile.html"; // Create a separate HTML file named mobile.html for mobile message
+  }
 </script>
 
 </body>

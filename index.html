@@ -13,6 +13,11 @@
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  .dark-mode body {
+    background-color: #333;
+    color: #fff;
   }
 </style>
 </head>
@@ -21,7 +26,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <h2 class="text-center mb-4">Ampere Alpha</h2> <!-- Modified H2 tag -->
+      <h2 class="text-center mb-4">Ampere External</h2> <!-- Modified H2 tag -->
       <div class="dropdown">
         <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Pick your provider
@@ -31,6 +36,7 @@
           <a class="dropdown-item" href="#">Kayflck!</a>
         </div>
       </div>
+      <button id="toggleMode" class="btn btn-secondary btn-block mt-3">Toggle Dark Mode</button> <!-- Button to toggle dark mode -->
     </div>
   </div>
 </div>
@@ -46,10 +52,18 @@
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
   }
 
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
   // Redirect to a page with a message if accessed from a mobile device
   if (isMobileDevice()) {
     window.location.href = "mobile.html"; // Create a separate HTML file named mobile.html for mobile message
   }
+
+  // Event listener for dark mode toggle button
+  document.getElementById('toggleMode').addEventListener('click', toggleDarkMode);
 </script>
 
 </body>

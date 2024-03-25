@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ampere (evo)</title>
+<title>Ampere</title>
 <!-- Add Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <style>
@@ -12,8 +12,8 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #191919; /* Dark mode background color */ 
-    color: #fff; /* Dark mode text color */
+    background-color: #191919;
+    color: #fff;
   }
 </style>
 </head>
@@ -22,33 +22,33 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <h2 class="text-center mb-4">Ampere External</h2> <!-- Modified H2 tag -->
+      <h2 class="text-center mb-4">Ampere External</h2> 
       <div class="dropdown">
         <button class="btn btn-primary btn-block dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Pick your provider
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="ampere_dl.html">v_next_ampere</a> <!-- Link to Ampere page -->
-          <a class="dropdown-item" href="kayflck_dl.html">Kayflck!</a> <!-- Link to Kayflck page -->
+          <a class="dropdown-item" href="ampere_dl.html">v_next_ampere</a> 
+          <a class="dropdown-item" href="kayflck_dl.html">Kayflck!</a> 
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Add Bootstrap JS (optional, for dropdown functionality) -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-  // Check if the website is being accessed from a mobile device
+ 
   function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
   }
 
-  // Redirect to a page with a message if accessed from a mobile device
+
   if (isMobileDevice()) {
-    window.location.href = "mobile.html"; // Create a separate HTML file named mobile.html for mobile message
+    window.location.href = "mobile.html"; 
   }
 </script>
 
